@@ -3,26 +3,20 @@ import { useState } from 'react'
 
 const Menu = () => {
 
-    const [hidden, setHidden] = useState(false)
+    const [hidden, setHidden] = useState(false);
 
-    const click = (e) => {
-        // e.stopPropagation();
-        setHidden(true)
+    const click = () => {
+        setHidden(true);
     }
 
-    const closeMenu = (e) => {
+    const closeMenu = () => {
         if(document.hasFocus()){
             setHidden(false);
         }
     }
 
     const pageChange = (e) => {
-        e.stopPropagation()
-        console.log(e.target.innerHTML.split(' ')[0])
-    }
-
-    const test = (e) => {
-        console.log(e.target)
+        console.log(e.target.innerHTML.split(' ')[0]);
     }
 
   return (
@@ -47,4 +41,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Menu;

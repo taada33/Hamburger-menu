@@ -1,11 +1,11 @@
 
 
 .hamburger{
+  cursor: pointer;
   width: 40px;
   position: absolute;
   left: 50px;
   top: 20px;
-  /* z-index: 1; */
 }
 
 .hamburger hr{
@@ -14,14 +14,13 @@
 }
 
 .dropdown li{
+  cursor: pointer;
   list-style: none;
   z-index: 1;
 }
 
 .dropdown hr{
   width: 200px;
-  /* position:absolute; */
-  /* margin-bottom: 2px; */
 }
 
 .dropdown{
