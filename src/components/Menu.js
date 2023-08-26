@@ -11,7 +11,9 @@ const Menu = () => {
     }
 
     const closeMenu = (e) => {
-        setHidden(false);
+        if(document.hasFocus()){
+            setHidden(false);
+        }
     }
 
     const pageChange = (e) => {
@@ -24,7 +26,7 @@ const Menu = () => {
     }
 
   return (
-    <div className='menu' tabIndex="0" onFocus={click} onBlur={closeMenu}>
+    <div className='menu' tabIndex="0" onClick={click} onBlur={closeMenu}>
         {!hidden && 
         <div className='hamburger'>
             <hr></hr>
